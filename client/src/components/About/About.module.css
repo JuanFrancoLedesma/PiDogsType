@@ -1,0 +1,107 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s;
+}
+
+.about {
+    margin-top: 30px;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid rgb(102, 202, 72);
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.about h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(41, 39, 39);
+}
+.about h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(41, 39, 39);
+}
+
+.tecnologiasContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tecnologia {
+  height: 100%;
+  width: 15%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tecnologia h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(41, 39, 39);
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.contactameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.contacto {
+  height: 100%;
+  width: 15%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto p {
+  color: rgb(41, 39, 39);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: underline;
+  color: rgb(41, 39, 39);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px){
+    .about{
+        width: 100%;
+    }
+    .tecnologiasContainer{
+        flex-direction: column;
+    }
+    .contactameContainer{
+        flex-direction: column;
+    }
+}

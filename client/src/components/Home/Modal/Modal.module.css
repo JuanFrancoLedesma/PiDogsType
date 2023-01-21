@@ -1,0 +1,143 @@
+.modalContainer {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s;
+}
+
+.modal {
+  background-color: rgba(27, 25, 25, 0.822);
+  height: 70vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+
+.modalImage {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage img {
+  max-height: 90%;
+  width: auto;
+  border-radius: 20px;
+  animation: fadeIn 1s;
+}
+
+.info {
+  background-color: rgb(240, 248, 255);
+  height: 50%;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.sideButton {
+  border: 0px;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  background-color: rgb(27, 25, 25);
+  color: rgb(102, 202, 72);
+  transition: all 0.25s ease;
+}
+
+.sideButton:hover {
+  cursor: pointer;
+  background-color: rgb(15, 14, 14);
+  color: rgb(68, 196, 29);
+}
+
+.x {
+  position: absolute;
+  top: 17%;
+  right: 26%;
+  border: 0px;
+  width: 3vw;
+  height: 3vw;
+  font-size: 1.2em;
+  border-radius: 7px;
+  transition: all 0.25s ease;
+}
+
+.x:hover {
+  background-color: rgba(228, 32, 32, 0.884);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.units {
+  position: absolute;
+  top: 25%;
+  right: 26%;
+  border: 0px;
+  width: auto;
+  height: 3vw;
+  font-size: 1.2em;
+  border-radius: 7px;
+  transition: all 0.25s ease;
+}
+
+.units:hover {
+  background-color: rgb(15, 14, 14);
+  color: rgb(68, 196, 29);
+  cursor: pointer;
+}
+
+.pata {
+  max-height: 90%;
+  width: auto;
+  border-radius: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal {
+    width: 90%;
+  }
+
+  .modalImage img {
+    max-height: auto;
+    width: 100%;
+  }
+
+  .x {
+    width: auto;
+    height: auto;
+    top: 16%;
+    right: 7%;
+  }
+
+  .units {
+    top: 16%;
+    left: 7%;
+    width: 50px;
+    height: auto;
+    
+  }
+}

@@ -1,0 +1,163 @@
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-items: center;
+}
+
+.filterButton{
+    margin: 10px 10px 10px 6px;
+    width: 75%;
+    height: 35px;
+    border-radius: 7px;
+    border: 0px;
+    background-color: rgb(39, 36, 36);
+    color: rgb(102, 202, 72);
+    transition: all 1s ease;
+}
+
+.filterButton:hover{
+    background-color: rgb(15, 14, 14);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.select{
+    width: 100%;
+    height: 250px;
+    margin: 10px 10px 10px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orderSelect{
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(105, 221, 70, 0.651);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.orderTitle{
+    width: 100%;
+    height: 33%;
+    
+}
+
+.orderOptions{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.orderOptions select{
+    width: 60%;
+    height: 35%;
+    padding-left: 2px;
+    border-radius: 7px;
+    border: 1.80px solid rgba(105, 221, 70, 0.651);
+}
+
+.orderButton{
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderButton button{
+    width: 70%;
+    height: 45%;
+    border-radius: 7px;
+    border: 0px;
+    background-color: rgb(27, 25, 25);
+    color: rgb(102, 202, 72);
+    transition: all 0.25s ease;
+}
+
+.orderButton button:hover{
+    background-color: rgb(15, 14, 14);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filterSelect{
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(105, 221, 70, 0.651);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filterTitle{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.filterOptions{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterOptions select{
+    width: 60%;
+    height: 50%;
+    padding-left: 2px;
+    border-radius: 7px;
+    border: 1.80px solid rgba(105, 221, 70, 0.651);
+
+}
+
+.clearButton{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clearButton button{
+    width: 70%;
+    height: 45%;
+    border-radius: 7px;
+    border: 0px;
+    background-color: rgb(27, 25, 25);
+    color: rgb(102, 202, 72);;
+    transition: all 0.25s ease;
+}
+
+.clearButton button:hover{
+    background-color: rgb(15, 14, 14);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 832px){
+    .filterContainer{
+        width: 100%;
+    }
+}
