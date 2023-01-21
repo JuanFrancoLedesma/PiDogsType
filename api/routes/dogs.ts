@@ -32,7 +32,7 @@ dogRouter.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const allDogs = await allBreeds();
-    const dog = filterById(allDogs, Number(id));
+    const dog = filterById(allDogs, id);
     res.send(dog);
   } catch (error: any) {
     res.send(error.message);

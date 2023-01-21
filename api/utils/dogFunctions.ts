@@ -47,8 +47,8 @@ const formatApiBreed = (breeds : any[]): DogInterface[] => {
             imperial_height,
             metric_weight,
             imperial_weight,
-            metricWeightProm : Number((metric_weight[0]+metric_weight[1])/2),
-            imperialWeightProm : Number((imperial_weight[0]+imperial_weight[1])/2),
+            metricWeightProm : (Number(metric_weight[0])+Number(metric_weight[1]))/2,
+            imperialWeightProm : (Number(imperial_weight[0])+Number(imperial_weight[1]))/2,
             life_span, 
             image: String(e.image.url),
             temperament: String(e.temperament),
@@ -60,6 +60,7 @@ const formatApiBreed = (breeds : any[]): DogInterface[] => {
 
 const formatDbBreed = (breeds : any[] | undefined ): DogInterface[]  => {
     if(!breeds?.length) return []
+
     const formatDbBreed = breeds.map(e => {
         return {
             id: String(e.id),
@@ -68,11 +69,11 @@ const formatDbBreed = (breeds : any[] | undefined ): DogInterface[]  => {
             imperial_height: e.imperial_height,
             metric_weight: e.metric_weight,
             imperial_weight: e.imperial_weight,
-            metricWeightProm : Number((e.metric_weight[0]+e.metric_weight[1])/2),
-            imperialWeightProm : Number((e.imperial_weight[0]+e.imperial_weight[1])/2),
+            metricWeightProm : (Number(e.metric_weight[0])+Number(e.metric_weight[1]))/2,
+            imperialWeightProm : (Number(e.imperial_weight[0])+Number(e.imperial_weight[1]))/2,
             life_span: e.life_span, 
-            image: String(e.image.url),
-            temperament: String(e.temperament),
+            image: String(e.image),
+            temperament: e.Temperaments.map((obj: { name: any; }) => obj.name).join(", "),
             createdByUser: false,
         }
     }) 
@@ -104,9 +105,9 @@ export const filterByName = (breeds : DogInterface[], name : string) : DogInterf
     return filterBreeds
 }
 
-export const filterById = (breeds : DogInterface[], id : number) : DogInterface | undefined => {
+export const filterById = (breeds : DogInterface[], id : string) : DogInterface | undefined => {
     console.log("IDDDDD ",id);
-    const idDog = breeds.find(e => Number(e.id) === id
+    const idDog = breeds.find(e => String(e.id) === id
     )
     console.log(idDog);
     
