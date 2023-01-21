@@ -70,6 +70,8 @@ const CreateForm = () => {
     let imperial_weight;
     let metric_height;
     let imperial_height;
+
+
     if(unit){
       metric_weight = [Number(input.minWeight), Number(input.maxWeight)]
       imperial_weight = [Number((Number(input.minWeight) *2.2).toFixed(0)), Number((Number(input.maxWeight) *2.2).toFixed(0))]
@@ -84,7 +86,7 @@ const CreateForm = () => {
 
     const newBreed : DogCreate= {
       name: input.name,
-      password: input.password,
+      password: input.password ? input.password : "123",
       metric_weight,
       imperial_weight,
       metric_height,
@@ -95,11 +97,11 @@ const CreateForm = () => {
     }
 
     try {
-      await axios.post("http://localhost:3001/dog/create", newBreed)
+      await axios.post("/dog/create", newBreed)
       alert("Raza creada exitosamente!")
-      // navigate("/home")
+      navigate("/home")
     } catch (error) {
-      alert(`Algo fallo con el siguiente error: ${error} `)
+      // alert(`Ingresa todos los campos!`)
     }
   }
 

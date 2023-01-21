@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -8,6 +9,8 @@ import CreateForm from "./components/CreateForm/CreateForm";
 import Home from "./components/Home/Home";
 import LandingPage from "./components/LandingPage/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
+
+axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001'
 
 function App() {
   return (

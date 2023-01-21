@@ -5,21 +5,21 @@ import { clearDogDetail, filterByTemperaments, getAllDogs, getDogById, getDogByN
 
 export const getDogs = () => {
   return async (dispatch: Dispatch) => {
-    const json = await axios.get("http://localhost:3001/dog");
+    const json = await axios.get("/dog");
     return dispatch(getAllDogs(json.data));
   };
 };
 
 export const getBreedByName = (name:string) => {
   return async (dispatch: Dispatch) => {    
-    const json = await axios.get(`http://localhost:3001/dog?name=${name}`)
+    const json = await axios.get(`/dog?name=${name}`)
     return dispatch(getDogByName(json.data))
   };
 };
 
 export const getBreedById = (id:string) => {
   return async (dispatch: Dispatch) => {
-    const json = await axios.get(`http://localhost:3001/dog/${id}`)
+    const json = await axios.get(`/dog/${id}`)
     return dispatch(getDogById(json.data))
   }
 }
