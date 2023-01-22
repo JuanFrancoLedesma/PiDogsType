@@ -17,12 +17,15 @@ module.exports={
     "dialect": "mysql"
   },
   "production": {
-    "url":process.env.DB_DEPLOY,
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
     "dialect":"postgres",
-    "host": "0.0.0.0",
     "dialectOptions": {
         "ssl": true,
         "rejectUnauthorized": false
     }
-}
+  }
 }
