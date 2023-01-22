@@ -17,10 +17,11 @@ module.exports={
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": process.env.DB_DEPLOY,
-    "dialect": "postgres",
+    "use_env_variable":process.env.DB_DEPLOY,
+    "dialect":"postgres",
+    "ssl": true,
     "dialectOptions": {
         "ssl": true
     }
-  }
+}
 }
