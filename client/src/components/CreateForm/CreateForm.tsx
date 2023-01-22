@@ -66,11 +66,11 @@ const CreateForm = () => {
   };
 
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+    e.preventDefault()
     let metric_weight : number[];
     let imperial_weight;
     let metric_height;
-    let imperial_height;
-
+    let imperial_height;    
 
     if(unit){
       metric_weight = [Number(input.minWeight), Number(input.maxWeight)]
@@ -101,6 +101,7 @@ const CreateForm = () => {
       alert("Raza creada exitosamente!")
       navigate("/home")
     } catch (error) {
+      alert("error")
       // alert(`Ingresa todos los campos!`)
     }
   }

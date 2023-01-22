@@ -16,7 +16,7 @@ export const validate = ({
 
   if (!name) errors.name = "Ingresa el nombre!";
   else if (!/[a-zA-Z]+/.test(name)) errors.name = "Solo letras!";
-  else errors.name = ""
+  else errors.name = "";
   //Contraseña
   if (!password) errors.password = "Ingresa una contraseña!";
   //Peso
@@ -25,6 +25,10 @@ export const validate = ({
     errors.weight = "Los pesos minimos y maximos deben ser diferentes";
   else if (Number(minWeight) > Number(maxWeight))
     errors.weight = "El peso minimo debe ser menor que el maximo";
+  else if (Number(minWeight) <= 0)
+    errors.weight = "El peso minimo debe ser mayor a 0";
+  else if (Number(maxWeight) >= 200)
+    errors.weight = "El peso minimo debe ser menor a 200";
   else if (/[a-zA-Z]+]+/.test(minWeight) || /[[a-zA-Z]+]+/.test(maxWeight))
     errors.weight = "Solo números!";
   //Altura
@@ -35,6 +39,10 @@ export const validate = ({
     errors.height = "Las alturas minimas y maximas deben ser diferentes";
   else if (Number(minHeight) > Number(maxHeight))
     errors.height = "La altura minima debe ser menor que la maxima";
+  else if (Number(minHeight) <= 0)
+    errors.weight = "La altura minima debe ser mayor a 0";
+  else if (Number(maxHeight) >= 200)
+    errors.weight = "La altura maxima debe ser menor a 200";
   //Esperanza de vida
   if (!minLifeSpan || !maxLifeSpan)
     errors.life_span = "Ingresa los años de vida!(Opcional)";
