@@ -19,6 +19,7 @@ module.exports={
   "production": {
     "url":process.env.DB_DEPLOY,
     "dialect":"postgres",
+    "host": "0.0.0.0",
     "dialectOptions": {
         "ssl": true,
         "rejectUnauthorized": false
