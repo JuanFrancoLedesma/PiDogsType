@@ -20,12 +20,9 @@ module.exports={
     "username": "root",
     "password": null,
     "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "host": "0.0.0.0",
     "dialect":"postgres",
-    "dialectOptions": {
-        "ssl": true,
-        "rejectUnauthorized": false
-    }
+    "ssl": true,
+    "rejectUnauthorized": false
   }
 }

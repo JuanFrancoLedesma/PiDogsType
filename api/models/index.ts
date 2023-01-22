@@ -9,8 +9,6 @@ const env = "production";
 const config = require(__dirname + "/../config/config.js")[env];
 const db: any = {};
 
-console.log(config);
-
 let sequelize: any;
 // if (config.use_env_variable) {
 //   sequelize = new Sequelize(process.env.DB_DEPLOY, config);
@@ -25,19 +23,7 @@ let sequelize: any;
 
 // sequelize = new Sequelize(process.env.DB_DEPLOY, config);
 sequelize = new Sequelize(
-   process.env.DB_DEPLOY, {
-    username: "root",
-    password: null,
-    database: "database_production",
-    host: "0.0.0.0",
-    dialect:"postgres",
-    rejectUnauthorized: false
-    // dialectOptions: {
-    //     "ssl": true,
-    //     "rejectUnauthorized": false
-    // }
-  
-});
+   process.env.DB_DEPLOY, config);
 
 fs.readdirSync(__dirname)
   .filter((file: string) => {
