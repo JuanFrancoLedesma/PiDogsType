@@ -19,9 +19,9 @@ module.exports={
   "production": {
     "use_env_variable":process.env.DB_DEPLOY,
     "dialect":"postgres",
-    "ssl": true,
     "dialectOptions": {
-        "ssl": true
+        "ssl": true,
+        "rejectUnauthorized": false
     }
 }
 }
