@@ -1,6 +1,5 @@
 require("dotenv").config()
 
-console.log(process.env.DB_NAME);
 
 module.exports={
   "development": {
@@ -18,10 +17,10 @@ module.exports={
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": process.env.DB_DEPLOY,
+    "dialect": "postgres",
+    "dialectOptions": {
+        "ssl": true
+    }
   }
 }
