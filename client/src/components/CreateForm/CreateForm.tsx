@@ -97,7 +97,7 @@ const CreateForm = () => {
     }
 
     try {
-      await axios.post("/dog/create", newBreed)
+      await axios.post("https://pidogstype-production.up.railway.app/dog/create", newBreed)
       alert("Raza creada exitosamente!")
       navigate("/home")
     } catch (error) {
